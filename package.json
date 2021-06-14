@@ -40,6 +40,8 @@
     "@types/mini-css-extract-plugin": "^1.4.3",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.7",
+    "@types/react-redux": "^7.1.16",
+    "@types/react-router-dom": "^5.1.7",
     "@types/webpack": "^5.28.0",
     "@types/webpack-dev-server": "^3.11.4",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
@@ -57,6 +59,7 @@
     "mini-css-extract-plugin": "^1.6.0",
     "postcss-loader": "^6.1.0",
     "prettier": "^2.3.1",
+    "redux-devtools": "^3.7.0",
     "style-loader": "^2.0.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
@@ -71,7 +74,11 @@
   "dependencies": {
     "antd": "^4.16.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0"
   },
   "browserslist": [
     "iOS >= 8",

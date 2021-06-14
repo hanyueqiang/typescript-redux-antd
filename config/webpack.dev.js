@@ -13,6 +13,15 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
+        test: /\.(png|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: 'static/[hash][ext][query]'
+        },
+        // 只解析src目录
+        include: path.resolve(__dirname, "../src"),
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',

@@ -1,22 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import CssDemo from '@/pages/cssDemo';
-import LessDemo from '@/pages/lessDemo';
-import './index.less'
-import AntdDemo from '@/pages/antdDemo';
-
-const App = () => (
-  <div>
-    <h1>React</h1>
-    <CssDemo />
-    <LessDemo />
-    <AntdDemo />
-  </div>
-);
+import React from 'react';
+import ReactDOM from 'react-dom';
+import store from './redux/store';
+import { Provider } from 'react-redux';
+import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </Provider>,
+  document.getElementById('root')
 );

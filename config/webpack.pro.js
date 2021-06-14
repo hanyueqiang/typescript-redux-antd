@@ -8,6 +8,15 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
+        test: /\.(png|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: 'static/[hash][ext][query]'
+        },
+        // 只解析src目录
+        include: path.resolve(__dirname, "../src"),
+      },
+      {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, {
           loader: 'css-loader',
@@ -39,7 +48,7 @@ module.exports = merge(common, {
   ],
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: "",
+    publicPath: "/",
     path: path.resolve(__dirname, "../build"),
     // 打包前清空输出目录
     clean: true,
