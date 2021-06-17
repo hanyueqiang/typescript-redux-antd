@@ -1,10 +1,11 @@
 const path = require("path");
 const webpack = require("webpack");
-
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
+  target: "web",
   mode: "development",
   output: {
     filename: "[name].js",
@@ -79,6 +80,10 @@ module.exports = merge(common, {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    // 热更新插件
+    new ReactRefreshWebpackPlugin({
+      exclude: [/node_modules/],
+    }),
   ],
   devtool: "inline-source-map",
   devServer: {
@@ -86,5 +91,7 @@ module.exports = merge(common, {
     historyApiFallback: true,
     port: 4000,
     hot: true,
+    hotOnly: true,// 页面构建失败不刷新页
+    open: true, // 自定打开浏览器
   },
 });
