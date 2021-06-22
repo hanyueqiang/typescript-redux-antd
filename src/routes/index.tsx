@@ -7,8 +7,7 @@ import routeConfigs from './loadPageConfig'
 export default function Index() {
   const noMenuLayouts = routeConfigs.filter(item => !item.menuLayout)
   const menuLayouts = routeConfigs.filter(item => item.menuLayout)
-  console.log('noMenuLayouts', noMenuLayouts)
-  console.log('menuLayouts', menuLayouts)
+  console.log(menuLayouts)
   return (
     <BrowserRouter>
       <Route render={() => (
@@ -22,7 +21,7 @@ export default function Index() {
             </Switch>
           </ProLayout>
         </Switch>
-      )} />
+        )} />
     </BrowserRouter>
   )
 }

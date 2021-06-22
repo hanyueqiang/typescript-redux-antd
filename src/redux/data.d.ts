@@ -1,13 +1,9 @@
-// src/redux/data.d.ts
 
-// 用户的字段类型
-type Person = {
-  id: number;
-  name: string;
-};
+import type { GlobalProps } from './actions/global.actions'
 
 // 所有用户的类型
 type AppState = {
-  people: Person[];
+  global: GlobalProps;
 };
-export { Person, AppState }
+
+export { GlobalProps, AppState }
