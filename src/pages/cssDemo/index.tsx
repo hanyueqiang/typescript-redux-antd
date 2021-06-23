@@ -11,7 +11,6 @@ const Index: React.FC = () => {
   const history = useHistory();
   const { userInfo } = global
   const dispatch = useDispatch();
-  console.log('global', global)
 
   const addPersonHandle = () => {
     dispatch(getUserInfo('王二'));
