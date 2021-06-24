@@ -26,7 +26,7 @@ const Index: FC = (props) => {
     return <LoadingOutlined />
   }
 
-  return <div style={{height: '100vh'}}>{props.children}</div>
+  return <div style={{height: '100%'}}>{props.children}</div>
 }
 
 export default Index

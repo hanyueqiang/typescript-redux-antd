@@ -9,6 +9,7 @@ import 'moment/locale/zh-cn';
 moment.locale('zh-cn');
 import RenderRouter from './routes';
 import AuthComponent from './auth'
+import './index.less'
 
 ReactDOM.render(
   <Provider store={store}>
