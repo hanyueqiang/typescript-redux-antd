@@ -12,7 +12,7 @@ export default function Index() {
     <BrowserRouter>
       <Route render={() => (
         <Switch>
-          <Route exact={true} path="/" render={() => <Redirect to='/home' />} />
+          <Route exact={true} path="/" render={() => <Redirect to='/virtual' />} />
           {noMenuLayouts.map((route: any) => <RouteWithRouters key={route.path} {...route} />)}
           <ProLayout >
             <Switch>
