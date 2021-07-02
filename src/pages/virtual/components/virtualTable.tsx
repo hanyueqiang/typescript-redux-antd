@@ -29,7 +29,7 @@ const Index: FC<VirtualProps> = (props) => {
     <div className={styles.virtual_content}>
       <Button onClick={onShow} type="primary">点击展示</Button>
       <Button onClick={onReset} style={{marginLeft: 16}}>重置</Button>
-      <VirtualTable dataSource={data} columns={columns} visibleHeight={500} />
+      <VirtualTable dataSource={data} columns={columns} visibleHeight={480} />
     </div>
   )
 }

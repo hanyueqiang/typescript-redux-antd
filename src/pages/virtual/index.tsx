@@ -21,9 +21,6 @@ const Index = () => {
           count,
           average_money: count,
           name: `name${count}`,
-          name1: `name1${count}`,
-          name2: `name2${count}`,
-          name3: `name3${count}`,
         }
         result.push(obj)
       }
