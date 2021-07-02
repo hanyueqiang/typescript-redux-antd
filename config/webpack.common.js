@@ -1,8 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const tsImportPluginFactory = require('ts-import-plugin')
 
 module.exports = {
+  performance: {
+    hints: false
+  },
   entry: {
     main: path.resolve(__dirname, "../src/index.tsx"),
   },
@@ -39,8 +43,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "React Build",
+      title: "management system",
       template: "public/index.html",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+          { from: path.join(__dirname,'../static'),
+            to: '../build/static' }
+      ],
     }),
   ],
 };
